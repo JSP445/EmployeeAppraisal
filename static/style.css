@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(background.svg);
+    background: url(background2.png);
+    background: url(bgd.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+#login-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    box-shadow: 1px 0px 38px 17px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 1px 0px 38px 17px rgba(0,0,0,0.55);
+    -moz-box-shadow: 1px 0px 38px 17px rgba(0,0,0,0.55);
+}
+
+form h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    margin: 30px;
+    color: #000;
+    letter-spacing: .2vw;
+}
+
+input, select {
+    width: 200px;
+    margin: 15px;
+    text-align: center;
+    outline: none;
+    border: none;
+    background: #eee;
+    letter-spacing: .15vw;
+}
+
+
+input[type="submit"] {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.25vw;
+}
+
+#dashboard-center {
+    padding: 20px;
+    box-shadow: 1px 0px 38px 17px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 1px 0px 38px 17px rgba(0,0,0,0.55);
+    -moz-box-shadow: 1px 0px 38px 17px rgba(0,0,0,0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#dashboard-center h1 {
+    margin: 20px;
+}
+
+.employee-container {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    text-transform: uppercase;
+    max-height: 500px;
+}
+
+h3 {
+    text-transform: uppercase;
+    letter-spacing: .2vw;
+    text-align: center;
+    
+}
+
+.appraisal-container {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid black;
+  text-transform: uppercase;
+  max-height: 500px;
+  outline: 2px solid black;
+}
+
+#employeeAppraiserId {
+    visibility: visible;
+    transition-duration: .5s;
+    opacity: 1;
+}
+
+.appraisee-container {
+    border: 2px solid #000;
+}
+
+.appraisee-status {
+    width: 300px;
+    display: none;
+    background: aquamarine;
+    transition-duration: .5s;
+}
+
+.appraisee-status .label {
+    display: inline-block;
+    width: 125px;
+}
+
+.appraisee-status input[type="number"] {
+    text-align: center;
+    width: 25px;
+}
+
+.report-center {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid black;
+    text-transform: uppercase;
+    max-height: 500px;
+}

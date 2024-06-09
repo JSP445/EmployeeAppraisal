@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dashboard</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    </head>
+    <body>
+        <div id="dashboard-center">
+            <div style="width:100%; position:relative; margin-bottom: 50px;" class="display: flex;">
+                <form style="display: inline-block; position: absolute; right: 0px;" action="logout">
+                    <input type="submit" class="btn btn-danger" value="Log-out">
+                </form>
+            </div>
+            <h1>Welcome, {{first_name}} {{last_name}}</h1>
+            <div>
+                <h3>Most recent appraisals</h3>
+                <table class="table table-dark"> 
+                    <thead>
+                        <tr>
+                            <th scope="col">Report No.</th>
+                            <th scope="col">Employee Name</th>
+                            <th scope="col">Appraiser Name</th>
+                            <th scope="col">Date</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{reports|safe}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    </body>
+</html>
